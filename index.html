@@ -1,0 +1,27 @@
+<!---Index.html-->>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">Rock Paper Scissors</h1>
+    <div class="emoji-div">
+      <div class="emoji" onclick="result('rock')">
+        <img class="img" src="rock-emoji.png">
+      </div>
+      <div class="emoji" onclick="result('paper')">
+        <img class="img"  src="paper-emoji.png">
+      </div>
+      <div class="emoji" onclick="result('scissor')">
+        <img class="img"  src="scissors-emoji.png">
+      </div>
+    </div>
+    <p class="p4"></p>
+    <p class="displayusermove"></p>
+    <p class="displaycommove"></p>
+    <p class="res">Wins:0 Loses:0 Ties:0</p>
+    <button onclick="resetScore()">Reset Score</button>
+  </body>
+</html>
