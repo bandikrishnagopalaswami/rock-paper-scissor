@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>login-form</title>
+    <style>
+    body{
+      background-color: bisque;
+    }  
+    .input-name,.input-password{
+      font-size:15px;
+      padding:10px 10px 10px 10px;
+      border-radius:5px;
+      display: block;
+      margin-top:5px;
+      margin-left:20px;
+      border-style:none;
+    }
+    .card{
+      width:300px;
+      display: grid;
+      grid-template-rows:75px 75px 75px;
+      background-color:rgb(205, 249, 249);
+      margin-left:35%;
+      margin-top:15%;
+    }
+    .name,.password{
+      width:100%;
+      border:none;
+      font-weight:medium;
+      font-size:18px;
+    }
+    .labels{
+      margin-left:10px;
+      font-size:16px;
+      font-weight:bold;
+      color:black;
+    }
+    .buttons{
+      width:100%;
+      display:grid;
+      grid-template-columns:150px 150px;
+    }
+    .submit-buttons{
+      width:100%;
+      border-style:none;
+    }
+    .sign-up-button,.login-button{
+      margin-left: 35px;
+      padding:12px 25px 12px 25px;
+      border-style:none;
+      background-color:green;
+      color:white;
+      font-weight:bold;
+      font-size:15px;
+      margin-top:20px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="name">
+      <label class="labels" for="username">Username</label>
+      <input class="input-name"type="text" id="username"placeholder="Enter your name" minlength="5" required onfocus="this.value=''">
+      </div>
+      <div class="password">
+      <label class="labels"for="password">Password</label>
+      <input for="password" id="password"class="input-password"type="password" placeholder="******" required onfocus="this.value=''">
+      </div>
+      <div class="buttons">
+        <div class="submit-buttons">
+          <button class="sign-up-button" onclick="updateUsersData()">Sign Up</button>
+        </div>
+        <div class="submit-buttons">
+          <button onclick="login()"class="login-button">Login</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let users={
+        names:[],
+        password:[]
+      }
+      function updateUsersData(){
+        let p=document.querySelector(".input-name");
+        //console.log(typeof p);
+        users.names.push(p.value);
+        p.innerText="enter your name";
+        let p1=document.querySelector(".input-password");
+        users.password.push(p1.value);
+        console.log(users);
+      }
+      function login(){
+        
+      }
+    </script>
+  </body>
+</html>
